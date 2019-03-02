@@ -1,2 +1,2 @@
-# Spark_Pandas_DataAnalysis_JokeScorePredictor
+# JokeScorePredictor: Spark Session Data Analysis using Pandas
 Using Reddit Corpora
