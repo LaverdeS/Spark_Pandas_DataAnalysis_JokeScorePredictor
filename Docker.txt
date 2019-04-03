@@ -1,0 +1,74 @@
+https://docs.docker.com/docker-for-windows/install/
+
+docker run --rm -it ubuntu:16.04 bash
+docker run --rm -it -v /workspace:/my-folder ubuntu:16.04 bash
+apt-get update
+en la carpeta del tutorial: cd hadoop-tutorial-materials/
+docker build -t test-image . 
+open with cat Dockerfile.gateway
+En docker ubuntu:16.04: apt-get -y install htop
+ set -x \
+    && apt-get update \
+    && apt-get install -y \
+       openjdk-8-jdk-headless \
+       wget
+
+wget -q \
+      http://mirror.synyx.de/apache/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz \
+      -O /tmp/hadoop.tar.gz \
+    && cd /opt \
+    && tar xf /tmp/hadoop.tar.gz \
+    && rm -f /tmp/hadoop.tar.gz
+
+En Bash:
+docker-compose up --build
+ set -x     && apt-get update     && apt-get install -y        openjdk-8-jdk-headless        wget
+
+virtualBox> red> avanzadas> put 10022 in both zeros
+HADOOP_VERSION=2.7.5 (not sure if its working)
+
+ set -x && apt-get install -y \
+    dnsutils \
+    iproute2 \
+    iputils-ping \
+    openssh-server \
+    sudo \
+    tmux
+
+mkdir -vp /var/run/sshd
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+echo "export PATH=$PATH" >> /etc/profile \
+ && echo "export JAVA_HOME=$JAVA_HOME" >> /etc/profile
+
+USER=tutorial
+ARG PASSWORD=tutorial
+ARG UID=1000
+ARG GID=1000
+RUN groupadd -g $GID $USER \
+    && useradd -m -u $UID -g $GID -s /bin/bash $USER \
+    && echo "$USER:$PASSWORD" | chpasswd \
+    && adduser $USER sudo
+
+En Bash: (I dont think its working)
+ENV PATH="/opt/hadoop-${HADOOP_VERSION}/bin:${PATH}" \
+    JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+USER=tutorial
+PASSWORD=tutorial
+UID=1000
+GID=1000
+groupadd -g $GID $USER \
+    && useradd -m -u $UID -g $GID -s /bin/bash $USER \
+    && echo "$USER:$PASSWORD" | chpasswd \
+    && adduser $USER sudo
+
+putty conexion tunnel dynamic 12345 
+
+https://www.codementor.io/jadianes/spark-mllib-logistic-regression-du107neto
+https://spark.apache.org/docs/latest/mllib-naive-bayes.html#naive-bayes-sparkmllib
+https://spark.apache.org/docs/2.2.0/ml-classification-regression.html#binomial-logistic-regression
+https://spark.apache.org/docs/2.2.0/mllib-linear-methods.html#logistic-regression
+https://github.com/apache/spark/tree/master/data/mllib
+https://machinelearningmastery.com/logistic-regression-for-machine-learning/
+

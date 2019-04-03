@@ -1,0 +1,5 @@
+https://github.com/CrowdTruth/Short-Text-Corpus-For-Humor-Detection/blob/master/datasets/humorous_oneliners.pickle
+
+https://vknight.org/unpeudemath/code/2015/06/14/natural-language-and-predicting-funny.html
+
+https://github.com/drvinceknight/EdinburghFringeJokes/blob/master/nlp-of-jokes-pyconuk.ipynb
